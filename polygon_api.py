@@ -13,12 +13,18 @@ def polygon_area(n, s):
 def home():
     return {"message": "Polygon Area API - Supports 3 to 10 sides"}
 
-@app.route('/area', methods=['GET'])
+@app.route('/area', methods=['GET', 'POST'])
 def get_area():
     try:
-        n = int(request.args.get('sides'))
-        s = float(request.args.get('length'))
-    except (TypeError, ValueError):
+        if request.method == 'GET':
+            n = int(request.args.get('sides'))
+            s = float(request.args.get('length'))
+        else:  # POST
+            data = request.get_json()
+            n = int(data.get('sides'))
+            s = float(data.get('length'))
+
+    except (TypeError, ValueError, AttributeError):
         return {"error": "Please provide valid 'sides' (int) and 'length' (float)"}, 400
 
     area = polygon_area(n, s)
