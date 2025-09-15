@@ -11,3 +11,17 @@ This project was built as part of our API development requirement and demonstrat
 - Supports both **GET** and **POST** requests.
 - Returns clean **JSON** responses.
 - Easy to extend for more polygons or additional geometry functions.
+- 🛠️ Installation & Setup
+
+ 1. Clone the Repository
+``bash
+git clone https://github.com/<your-group-username>/polygon-area-api.git
+cd polygon-area-api
+2. Install Dependencies
+
+Make sure you have Python 3 installed, then run:
+3. Run the API
+
+python polygon_api.py
+The server will start at:
+http://127.0.0.1:5000
