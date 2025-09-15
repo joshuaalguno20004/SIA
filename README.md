@@ -11,7 +11,9 @@ This project was built as part of our API development requirement and demonstrat
 - Supports both **GET** and **POST** requests.
 - Returns clean **JSON** responses.
 - Easy to extend for more polygons or additional geometry functions.
-- 🛠️ Installation & Setup
+
+- 
+- 🛠️ INSTALLATION AND SETUP
 
  1. Clone the Repository
 ``bash
