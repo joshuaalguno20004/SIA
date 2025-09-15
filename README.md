@@ -27,3 +27,31 @@ Make sure you have Python 3 installed, then run:
 python polygon_api.py
 The server will start at:
 http://127.0.0.1:5000
+
+
+EXAMPLE OF GET AND POST
+
+1. GET /area
+
+Calculate area using query parameters.
+
+Request:
+
+GET http://127.0.0.1:5000/area?sides=6&length=4
+
+2. POST /area
+
+Calculate area by sending JSON data.
+
+Request:
+
+POST http://127.0.0.1:5000/area
+Content-Type: application/json
+
+
+Body:
+
+{
+  "sides": 8,
+  "length": 5
+}
